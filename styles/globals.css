@@ -1,0 +1,173 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* globals.css */
+
+/* Resetting some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif; /* Modern sans-serif font */
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #f8fafc; /* Light slate background */
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: #2e2e2e; /* Slate color for the title */
+  margin-bottom: 20px;
+}
+
+/* Styling for text areas */
+textarea {
+  width: 100%;
+  max-width: 600px;
+  min-height: 150px;
+  padding: 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  resize: vertical;
+  overflow: auto;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+/* Styling for select inputs */
+select {
+  width: 100%;
+  max-width: 200px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+/* Styling for buttons */
+button {
+  padding: 10px 20px;
+  background-color: #4f46e5;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #4338ca;
+}
+
+button:active {
+  background-color: #3730a3;
+}
+
+/* URL & Copy Button Styling */
+.url-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  flex-direction: column;
+}
+
+.url-container a {
+  font-size: 1rem;
+  color: #3b82f6;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.url-container button {
+  background-color: #10b981;
+  padding: 5px 10px;
+  font-size: 0.875rem;
+}
+
+.url-container button:hover {
+  background-color: #059669;
+}
+
+/* Toast message */
+.toast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px;
+  background-color: #4ade80;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.toast.show {
+  opacity: 1;
+}
+
+.toast-message {
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  textarea {
+    width: 100%;
+    max-width: 100%;
+    min-height: 120px;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  textarea {
+    min-height: 100px;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}
