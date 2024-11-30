@@ -1,0 +1,35 @@
+# Node.js dependencies
+/node_modules/
+
+# Build output
+/dist/
+/build/
+
+# .env file for environment variables (if you use any sensitive data)
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE and editor-specific files
+.vscode/
+.idea/
+
+# npm package-lock files (optional, you may decide to keep them)
+package-lock.json
+
+# Tailwind CSS build files (optional, if generated)
+*.css
+
+# SQLite database files (if using SQLite)
+*.sqlite
+*.db
+
+# Coverage folder from testing tools
+/coverage
